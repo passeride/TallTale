@@ -1,0 +1,20 @@
+@startuml
+
+title S4A | Create Game
+
+actor User
+entity Client
+entity Backend
+database DB
+
+User --> Client : Fills inn username
+User --> Client : Clicks "Create Game"
+Client --> Backend : Gives username and request game
+Backend --> DB : Creates a user
+DB --> Backend : Gives userID
+Backend --> DB : Creates a game
+DB --> Backend : Gives gameID
+Backend --> Client : Gives userID and GameID
+Client --> User : shows lobby and join code
+
+@enduml

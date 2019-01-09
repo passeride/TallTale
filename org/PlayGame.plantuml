@@ -1,0 +1,44 @@
+@startuml
+
+title S4A | Game Cycle
+
+actor User
+entity Client
+entity Backend
+database DB
+
+== Repeat every x.x second ==
+Client --> Backend : Request Game State
+Backend --> DB : Get info on game and players
+DB --> Backend : Returns info
+Backend --> Client : Returns JSON Gamestate
+Client --> Client : Parse Gamestate
+alt Users turn
+    Client -->  User : Unlocks the type area
+    note over Client, User
+          Somehow notifies user that its time
+    end note
+    User --> Client : Types inn string and commits
+    Client --> Client : Adds it to the story
+    Client --> Backend : Sends string
+    Backend --> DB : Commits String
+    Backend --> Backend : Rephresh gamestate
+    Backend --> Client : Send new gamestate
+else Not users turn
+     Client --> Client : Updating story
+     Client --> Client : Check timestamp for previous user
+     alt User Timeout
+         Client --> Client : Check who has the lowest userID
+         note over Client
+              This is if the user has the lowest userID
+              When the user with the lowest userID is writing
+              the second to last will check
+         end note
+         Client --> Backend : Inform of timeout
+         Backend --> DB : Submit blank for current user
+         Backend --> Backend : Refresh gamestate
+         Backend --> Client : Send new gamestate
+     end
+end
+
+@enduml

@@ -1,0 +1,157 @@
+.storyBox{
+    display:block;
+    margin-right:auto;
+    margin-left:auto;
+    text-align:center;
+}
+
+.storyTitle{
+    margin-top:2rem;
+    margin-bottom:2rem;
+    z-index:20;
+    font-size:5rem;
+    font-weight:bold;
+}
+
+.storyPage{
+    width:50%;
+    display:block;
+    margin-right: auto;
+    margin-left:auto;
+    text-align:left;
+    font-size:2em;
+
+}
+
+.storyPage:after{
+/*    position: fixed;
+    float:center;
+    bottom: 0;
+    top:10%;
+    left: 20%;
+    height: 100%;
+    width: 70%;
+    content: "";
+    z-index:10;
+    /*blur stuff
+From: https://www.cssmatic.com/gradient-generator
+   */
+background: rgba(255,255,255,1);
+background: -moz-linear-gradient(top, rgba(255,255,255,1) 7%, rgba(255,255,255,0) 37%, rgba(242,246,248,0) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(7%, rgba(255,255,255,1)), color-stop(37%, rgba(255,255,255,0)), color-stop(100%, rgba(242,246,248,0)));
+background: -webkit-linear-gradient(top, rgba(255,255,255,1) 7%, rgba(255,255,255,0) 37%, rgba(242,246,248,0) 100%);
+background: -o-linear-gradient(top, rgba(255,255,255,1) 7%, rgba(255,255,255,0) 37%, rgba(242,246,248,0) 100%);
+background: -ms-linear-gradient(top, rgba(255,255,255,1) 7%, rgba(255,255,255,0) 37%, rgba(242,246,248,0) 100%);
+background: linear-gradient(to bottom, rgba(255,255,255,1) 7%, rgba(255,255,255,0) 37%, rgba(242,246,248,0) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f2f6f8', GradientType=0 );
+}
+
+.storyEntry{
+    display: inline-block;
+    width: auto;
+    /*unselectable */
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+
+    /* Rules below not implemented in browsers yet */
+    -o-user-select: none;
+    user-select: none;
+
+    /*blurry stuff*/
+    color: transparent;
+    text-shadow: 0 0 25px rgba(0,0,0,0.5);
+}
+
+.form-control[disabled]{
+    background:gray;
+}
+
+#sendButton[disabled]{
+    background:gray;
+}
+
+.entry{
+    color: black;
+}
+
+.hiddenEntry{
+    color: transparent;
+}
+
+.logo{
+    poisition:relative;
+    margin-top: 1rem;
+    width: 80%;
+    height: auto;
+    margin-bottom: 5rem;
+    display:block;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+.logo img{
+    max-width:90%;
+    display:block;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+.sidePanel{
+
+    background-color:#EEEEEE;
+    /* Graident for seperation */
+-webkit-box-shadow: 18px 0px 45px 12px rgba(0,0,0,0.2);
+-moz-box-shadow: 18px 0px 45px 12px rgba(0,0,0,0.2);
+box-shadow: 18px 0px 45px 12px rgba(0,0,0,0.2);
+}
+
+.player{
+    display:inline-block;
+    padding: 10px;
+    background: green;
+    font-size:2em;
+    margin-top:10px;
+    max-width:70%;
+    color:white;
+    font-weight:bold;
+
+    /* border fancyness */
+    border-radius: 0px 130px 130px 0px;
+    -moz-border-radius: 0px 130px 130px 0px;
+    -webkit-border-radius: 0px 130px 130px 0px;
+    border: 0px solid #000000;
+
+    /* more fancyness */
+    -webkit-box-shadow: 0px 0px 30px -5px rgba(0,0,0,0.52);
+    -moz-box-shadow: 0px 0px 30px -5px rgba(0,0,0,0.52);
+    box-shadow: 0px 0px 30px -5px rgba(0,0,0,0.52);
+}
+
+.storyInput{
+    position: absolute;
+    bottom: 20px;
+    width: 50%;
+    height: 10%;
+    font-size: 2em;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.storyInput input{
+    font-size: 3rem;
+}
+
+.storyInput button{
+    height: 100%;
+    background:green;
+    font-size:3rem;
+    padding-left:3rem;
+    padding-right:3rem;
+}
+
+.playerPlate{
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+}
